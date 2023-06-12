@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1670955599 source:c:\users\48662\onedrive\pulpit\c++\zelent zadanie domowe 13odc c++\main.cpp
+	<iostream>
+	<time.h>
+	<cstdlib>
+

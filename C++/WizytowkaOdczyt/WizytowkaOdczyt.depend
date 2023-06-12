@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1668946452 source:c:\users\48662\onedrive\pulpit\c++\wizytowkaodczyt\main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+

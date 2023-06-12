@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1686588722 source:c:\users\48662\onedrive\pulpit\c++\1\main.cpp
+	<iostream>
+	<windows.h>
+	<cstdlib>
+	<time.h>
+	<stdio.h>
+	<iomanip>
+

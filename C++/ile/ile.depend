@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1669906987 source:c:\users\48662\onedrive\pulpit\c++\ile\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+

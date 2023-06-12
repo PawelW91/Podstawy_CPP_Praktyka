@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1670961405 source:c:\users\48662\onedrive\pulpit\c++\14 - quicksort\main.cpp
+	<iostream>
+	<time.h>
+	<windows.h>
+
+1671046126 source:c:\users\48662\onedrive\pulpit\c++\14 - sortowanie - zelent\main.cpp
+	<iostream>
+	<time.h>
+	<windows.h>
+

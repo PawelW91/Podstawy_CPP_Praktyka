@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1668950320 source:c:\users\48662\onedrive\pulpit\c++\quiz\main.cpp
+	<iostream>
+	<fstream>
+	<algorithm>
+	<string>
+

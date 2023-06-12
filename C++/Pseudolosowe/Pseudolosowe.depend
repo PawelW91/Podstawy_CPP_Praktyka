@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1667650410 source:c:\users\48662\onedrive\pulpit\c++\pseudolosowe\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+

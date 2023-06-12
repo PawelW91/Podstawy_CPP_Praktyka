@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1667652373 source:c:\users\48662\onedrive\pulpit\c++\lotto\main.cpp
+	<iostream>
+	<windows.h>
+	<time.h>
+
