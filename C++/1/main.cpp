@@ -3,29 +3,46 @@
 #include <cstdlib>
 #include <time.h>
 #include <stdio.h>
-#include<iomanip>
+#include <iomanip>
+#include <conio.h>
+
 
 using namespace std;
 
-    long double F[100000];
-    int N,x;
+    float x,y;
+    char W;
 
 int main()
 {
 
-    cout<< "Ile liczb F wyznaczyc:";
-    cin>>N;
-    cout<<setprecision(10000);
-    F[0]=1;
-    F[1]=1;
-    cout<<"1"<<endl<<"1"<<endl;
-    for (int i=2; i<N; i++)
-    {
-        F[i]=F[i-1]+F[i-2];
+    while(true){
+    cout<< "Podaj dwie liczby x i y:"<<endl;
+    cin>>x>>y;
 
+    cout<<endl<<"Menu Glowne:"<<endl
+    <<"-------------------"<<endl
+    <<"1. Dodawanie"<<endl
+    <<"2. Odejmowanie"<<endl
+    <<"3. Mnozenie"<<endl
+    <<"4. Dzielenie"<<endl
+    <<"5. Zamknij program"<<endl
+    <<"Wybierz numer:";
+    W=getch();
+
+    switch(W)
+    {
+        case '1': {cout<<x+y;} break;
+        case '2': {cout<<x-y;} break;
+        case '3': {cout<<x*y;} break;
+        case '4': {if (y==0) {cout<<"Nie da sie przez zero :<";} else {cout<<x/y;}} break;
+        case '5': exit(0);break;
+        default: cout<<"Nie ma takiej opcji w menu!";
+    }
+    getchar();getchar();
+    system("cls");
+    cout<<endl;
     }
 
-    cout<< F[N-1]<<endl;
 
     return 0 ;
 }
