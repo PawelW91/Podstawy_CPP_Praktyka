@@ -7,7 +7,7 @@
 	<stdio.h>
 	<iomanip>
 
-1686670025 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\c++\1\main.cpp
+1686682309 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\c++\1\main.cpp
 	<iostream>
 	<windows.h>
 	<cstdlib>
@@ -15,4 +15,7 @@
 	<stdio.h>
 	<iomanip>
 	<conio.h>
+	<fstream>
+	<algorithm>
+	<string>
 
