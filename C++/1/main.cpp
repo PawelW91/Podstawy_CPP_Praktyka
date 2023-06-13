@@ -9,39 +9,40 @@
 
 using namespace std;
 
-    float x,y;
-    char W;
+    int N;
 
 int main()
 {
 
-    while(true){
-    cout<< "Podaj dwie liczby x i y:"<<endl;
-    cin>>x>>y;
 
-    cout<<endl<<"Menu Glowne:"<<endl
-    <<"-------------------"<<endl
-    <<"1. Dodawanie"<<endl
-    <<"2. Odejmowanie"<<endl
-    <<"3. Mnozenie"<<endl
-    <<"4. Dzielenie"<<endl
-    <<"5. Zamknij program"<<endl
-    <<"Wybierz numer:";
-    W=getch();
-
-    switch(W)
+    cout<< "Podaj numer miesiaca:";
+    if (!(cin>>N))
     {
-        case '1': {cout<<x+y;} break;
-        case '2': {cout<<x-y;} break;
-        case '3': {cout<<x*y;} break;
-        case '4': {if (y==0) {cout<<"Nie da sie przez zero :<";} else {cout<<x/y;}} break;
-        case '5': exit(0);break;
-        default: cout<<"Nie ma takiej opcji w menu!";
+        cerr<<"To nie jest numer miesiaca";
+        exit(0);
     }
-    getchar();getchar();
-    system("cls");
-    cout<<endl;
-    }
+
+
+
+    switch(N){
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            cout<<"ten mies ma 31 dni";break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            cout<<"ten mies ma 30 dni";break;
+        case 2:
+            cout<<"ten mies ma 28 dni";break;
+        default: cout<<"zly numer miesiaca";break;
+        }
+
 
 
     return 0 ;
