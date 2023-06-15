@@ -11,24 +11,30 @@
 
 using namespace std;
 
+    float cale(float z)    {return z*39.37;}
+    float jardy(float z)   {return z*1.0936;}
+    float mile(float z)    {return z*0.0621;}
+    void miles(float z)    {cout<<z*0.000621;}
 
 int main()
 {
-    string I,P,O;
-    int L;
-    cout<<"Jak masz na imie? ";
-    getline(cin,I);
-    getline(cin,P);
-    O=I+P;
-    L=O.length();
-    for (int i=0; i<L/2; i++)
-    {
-        char B;
-        B=O[i];
-        O[i]=O[L-1-i];
-        O[L-1-i]=B;
-    }
-    cout<<O;
+
+    float X;
+    char x;
+    cout<<"Podaj ile metrow trzeba przekonwertowac: "; cin>>X;
+    cout<<"Chcialbys wiedziec ile to jest: "<<endl<<"a) cale"<<endl<<"b) jardy"<<endl<<"c) mile"<<endl;x=getch();
+    switch(x){
+        case 'a': cout<<cale(X);      break;
+        case 'b': cout<<jardy(X);     break;
+        case 'c': miles(X);           break;
+        default: cout<<"Podales bledny wybor ;-(";}
+
+
+
+
+
+
+
 
     return 0 ;
 }
