@@ -11,29 +11,48 @@
 
 using namespace std;
 
-    float cale(float z)    {return z*39.37;}
-    float jardy(float z)   {return z*1.0936;}
-    float mile(float z)    {return z*0.0621;}
-    void miles(float z)    {cout<<z*0.000621;}
-
+int ile;
+clock_t start, stop;
+double czas;
 int main()
 {
 
-    float X;
-    char x;
-    cout<<"Podaj ile metrow trzeba przekonwertowac: "; cin>>X;
-    cout<<"Chcialbys wiedziec ile to jest: "<<endl<<"a) cale"<<endl<<"b) jardy"<<endl<<"c) mile"<<endl;x=getch();
-    switch(x){
-        case 'a': cout<<cale(X);      break;
-        case 'b': cout<<jardy(X);     break;
-        case 'c': miles(X);           break;
-        default: cout<<"Podales bledny wybor ;-(";}
 
+    cout<<"Ile liczb w tablicy?";
+    cin>>ile;
 
+    int *tablica;
+    tablica = new int [ile];
 
+    start=clock();
+    for (int i=0;i<ile;i++)
+    {
+        tablica[i]=i;
+        tablica[i]+=50;
+    }
+    stop=clock();
 
+    czas=(double)(stop-start)/CLOCKS_PER_SEC;
+    cout<<"Czas bez wskaznika: "<<czas<<endl;
 
+    delete [] tablica;
 
+    int *wskaznik=tablica;
+    tablica=new int[ile];
+
+    start=clock();
+    for (int i=0;i<ile;i++)
+    {
+        *wskaznik=i;
+        *wskaznik+=50;
+        wskaznik++;
+    }
+    stop=clock();
+
+    czas=(double)(stop-start)/CLOCKS_PER_SEC;
+    cout<<"Czas ze wskaznikiem: "<<czas<<endl;
+
+    delete [] tablica;
 
 
     return 0 ;
