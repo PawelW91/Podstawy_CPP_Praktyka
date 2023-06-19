@@ -17,7 +17,7 @@ double czas;
 int main()
 {
 
-
+/*
     cout<<"Ile liczb w tablicy?";
     cin>>ile;
 
@@ -52,7 +52,11 @@ int main()
     czas=(double)(stop-start)/CLOCKS_PER_SEC;
     cout<<"Czas ze wskaznikiem: "<<czas<<endl;
 
-    delete [] tablica;
+    delete [] tablica;*/
+
+    int L=0;
+    int* W=&L;
+    cout<<W<<endl<<W+1<<endl<<*W<<endl<<*W+1;
 
 
     return 0 ;
