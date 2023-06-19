@@ -52,11 +52,16 @@ int main()
     czas=(double)(stop-start)/CLOCKS_PER_SEC;
     cout<<"Czas ze wskaznikiem: "<<czas<<endl;
 
+<<<<<<< HEAD
     delete [] tablica;*/
 
     int L=0;
     int* W=&L;
     cout<<W<<endl<<W+1<<endl<<*W<<endl<<*W+1;
+=======
+    //Dzis wolne ;-)  Kolejny dzień.
+    delete [] tablica;
+>>>>>>> 6e3a850f5eaa42a981e245750486f6091bd85bfd
 
 
     return 0 ;
