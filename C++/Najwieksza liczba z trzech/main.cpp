@@ -21,5 +21,26 @@ int main()
     cout<< "Najwieksza z nich to: "<<m<<" ;-)";
 
 
+    /*
+    NA WSKAZNIKACH NAJWIEKSZA LICZBA Z N LICZB:
+    int N,m;
+    cout<<"Ile liczb: ";
+    cin>>N;
+    int *T;
+    T=new int [N];
+    cout<<"wymien liczby: "; for(int i=0;i<N;i++){cin>>T[i];}
+
+        for(int i=0;i<N;i++)
+        {
+            if (m<*T)m=*T;
+            T++;
+        }
+        cout<<"Najwieksza to: "<<m;
+
+
+    delete [] T;
+    */
+
+
     return 0;
 }
