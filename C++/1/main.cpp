@@ -11,49 +11,33 @@
 
 using namespace std;
 
-int ile;
-clock_t start, stop;
-double czas;
+
+
 int main()
 {
+    int s=0,x,m=0;
+    int T[5],X[5];
+    cout<<"Wymien 5 liczb: "; for(int i=0;i<5;i++){cin>>T[i];}
 
-/*
-    cout<<"Ile liczb w tablicy?";
-    cin>>ile;
+        for(int i=0;i<5;i++)
+        {
+            s+=T[i];
+        }
+        s=s/5;
 
-    int *tablica;
-    tablica = new int [ile];
+        cout<<"Srednia to: "<<s<<endl;
 
-    start=clock();
-    for (int i=0;i<ile;i++)
-    {
-        tablica[i]=i;
-        tablica[i]+=50;
-    }
-    stop=clock();
+        for(int i=0;i<5;i++)
+        {
+            if (abs(s-T[i]))
+        }
 
-    czas=(double)(stop-start)/CLOCKS_PER_SEC;
-    cout<<"Czas bez wskaznika: "<<czas<<endl;
 
-    delete [] tablica;
 
-    int *wskaznik=tablica;
-    tablica=new int[ile];
 
-    start=clock();
-    for (int i=0;i<ile;i++)
-    {
-        *wskaznik=i;
-        *wskaznik+=50;
-        wskaznik++;
-    }
-    stop=clock();
 
-    czas=(double)(stop-start)/CLOCKS_PER_SEC;
-    cout<<"Czas ze wskaznikiem: "<<czas<<endl;
 
-Codzienne zadanko.
-    
+        cout<<"Najblizsza sredniej to: "<<x;
 
 
     return 0 ;
