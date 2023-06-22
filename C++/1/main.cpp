@@ -36,6 +36,7 @@ int main()
 
 
 
+    
 
         cout<<"Najblizsza sredniej to: "<<x;
 
