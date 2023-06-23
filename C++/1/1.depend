@@ -7,15 +7,7 @@
 	<stdio.h>
 	<iomanip>
 
-1687376966 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\c++\1\main.cpp
+1687544202 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\c++\1\main.cpp
 	<iostream>
-	<windows.h>
-	<cstdlib>
-	<time.h>
-	<stdio.h>
-	<iomanip>
-	<conio.h>
-	<fstream>
-	<algorithm>
-	<string>
+	<cmath>
 

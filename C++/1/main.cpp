@@ -1,45 +1,27 @@
 #include <iostream>
-#include <windows.h>
-#include <cstdlib>
-#include <time.h>
-#include <stdio.h>
-#include <iomanip>
-#include <conio.h>
-#include <fstream>
-#include <algorithm>
-#include <string>
-
+#include <cmath>
 using namespace std;
-
-
 
 int main()
 {
-    int s=0,x,m=0;
-    int T[5],X[5];
-    cout<<"Wymien 5 liczb: "; for(int i=0;i<5;i++){cin>>T[i];}
+    int ile_t;
+    cin>>ile_t;
+    for(int i=0;i<ile_t;i++)
+    {
+        int l,d,j,x=1;
+        cin>>l;
+        if (l>9) cout<<endl<<"0 0"<<endl;
+        else
+        {   for(int i=1;i<=l;i++)
+            {
+                x*=i;
+            }
 
-        for(int i=0;i<5;i++)
-        {
-            s+=T[i];
+        d=(x/10)%10;
+        j=x%10;
+        cout<<endl<<d<<" "<<j<<endl;
         }
-        s=s/5;
-
-        cout<<"Srednia to: "<<s<<endl;
-
-        for(int i=0;i<5;i++)
-        {
-            if (abs(s-T[i]))
-        }
-
-
-
-
-
-    
-
-        cout<<"Najblizsza sredniej to: "<<x;
-
+    }
 
     return 0 ;
 }
