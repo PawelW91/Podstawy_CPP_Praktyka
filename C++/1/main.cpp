@@ -2,27 +2,27 @@
 #include <cmath>
 using namespace std;
 
+int X (int a,int b){
+    while(a!=b){
+            if (a>b)    {a-=b;}
+            else        {b-=a;}
+            }
+            return a+b;
+    }
 int main()
 {
     int ile_t;
+    int wynik[ile_t];
     cin>>ile_t;
     for(int i=0;i<ile_t;i++)
     {
-        int a,b,NWW=1,NWD,MIN;
+        int a,b;
         cin>>a>>b;
+        wynik[i]=X(a,b);
+    }
 
-        //NWW - najmniejsza wspolna wielokrotnosc
-        //NWD - najwiekszy wspolny dzielnik
-
-        MIN=min(a,b);
-        for (int i=1;i<=MIN;i++)
-        if(a%i==0 && b%i==0) {NWD=i;}
-
-        if (a==b) {NWW=a;}
-        else {NWW=(a*b)/NWD;}
-
-        cout<<NWW<<endl;
-
+    for (int i=0;i<ile_t;i++) {
+        cout<<wynik[i]<<endl;
     }
 
     return 0 ;
