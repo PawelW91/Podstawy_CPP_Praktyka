@@ -8,19 +8,21 @@ int main()
     cin>>ile_t;
     for(int i=0;i<ile_t;i++)
     {
-        int l,d,j,x=1;
-        cin>>l;
-        if (l>9) cout<<endl<<"0 0"<<endl;
-        else
-        {   for(int i=1;i<=l;i++)
-            {
-                x*=i;
-            }
+        int a,b,NWW=1,NWD,MIN;
+        cin>>a>>b;
 
-        d=(x/10)%10;
-        j=x%10;
-        cout<<endl<<d<<" "<<j<<endl;
-        }
+        //NWW - najmniejsza wspolna wielokrotnosc
+        //NWD - najwiekszy wspolny dzielnik
+
+        MIN=min(a,b);
+        for (int i=1;i<=MIN;i++)
+        if(a%i==0 && b%i==0) {NWD=i;}
+
+        if (a==b) {NWW=a;}
+        else {NWW=(a*b)/NWD;}
+
+        cout<<NWW<<endl;
+
     }
 
     return 0 ;
