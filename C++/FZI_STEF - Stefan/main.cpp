@@ -4,20 +4,20 @@ using namespace std;
 
 int main()
 {
-    int ile;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int ile,X;
     cin>>ile;
-    int X[ile];
     long long curSum=0,maxSum=0;
-    for (int i=0;i<ile;i++)
+    while(ile--)
     {
-        cin>>X[i];
-    }
-    for (int i=0;i<ile;i++)
-    {
-        curSum+=X[i];
+        cin>>X;
+        curSum+=X;
         if (curSum>maxSum){maxSum=curSum;}
         if (curSum<0){curSum=0;}
     }
-    cout<<maxSum<<endl;
+    cout<<maxSum<<'\n';
+
     return 0;
 }
