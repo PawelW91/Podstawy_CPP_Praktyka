@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1689342910 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\c++\jhtmllet - tagi html\main.cpp
+	<iostream>
+	<string>
+	<cctype>
+
