@@ -2,22 +2,50 @@
 
 using namespace std;
 //do skonczenia
+
+string szyfruj(string tekst, string klucz)
+{
+    string tekst_zaszyfrowany;
+    int l=klucz.length();
+    for(int i=0;i<tekst.length();i++)
+    {
+        char litera=tekst[i];
+        int klucz_cyfra=klucz[i%l]-'0';
+        char litery_przesuniete=((litera-'A'+klucz_cyfra)%26)+'A';
+        tekst_zaszyfrowany+=litery_przesuniete;
+    }
+    return tekst_zaszyfrowany;
+}
+
+string deszyfruj(string tekst, string klucz)
+{
+    string tekst_deszyfrowany;
+    int l=klucz.length();
+    for(int i=0;i<tekst.length();i++)
+    {
+        char litera=tekst[i];
+        int klucz_cyfra=klucz[i%l]-'0';
+        char litery_przesuniete=((litera-'A'+klucz_cyfra+26)%26)+'A';
+        tekst_deszyfrowany+=litery_przesuniete;
+    }
+    return tekst_deszyfrowany;
+}
+
+
 int main()
 {
-    string polecenie;
-    cin>>polecenie;
-    if(polecenie==SZYFRUJ)
+    string polecenie,tekst,klucz,wynik;
+        cin>>polecenie>>klucz>>tekst;
+    if(polecenie=="SZYFRUJ")
     {
-        for(int i=0;i<x.length();i++)
-        {
-            if(x[i]==90)     // kody ASCII 90 to Z
-                {
-                    if(x[i] == 'Z')         {x[i] = 'A';}
-                }
-            else if(x[i]>64)                {x[i]=x[i]+1;}	// od 65 zaczyna sie A
-        }
-        for(int i=0;i<x.length();i++)   {cout<<x[i];}
-        cout<<endl;
+        wynik=szyfruj(tekst,klucz);
+        cout<<wynik<<endl;
+    }
+    if(polecenie=="DESZYFRUJ")
+    {
+        wynik=deszyfruj(tekst,klucz);
+        cout<<wynik<<endl;
     }
     return 0;
 }
+
