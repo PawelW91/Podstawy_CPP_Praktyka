@@ -1,33 +1,52 @@
 #include <iostream>
-#include <string>
+#include <vector>
+
 using namespace std;
 
-int main()
-{
-    int ile_t;
-    cin>>ile_t;
-    cin.ignore();
-    while(ile_t--)
-    {
-        string x,y,z;
-        int ile=0;
-        getline(cin,x);
-        size_t pozycja=x.find(' ');
-        for(int i=pozycja+1;i<x.length();i++)
-        {
-            z+=x[i];
-        }
-        for(int i=0;i<x.length();i++)
-        {
-            if(x[i]==' ') break;
-            y+=x[i];
-        }
-        for(int i=0;i<y.length();i++)
-        {
-            if(z[ile]==y[i]){ile++;}
-        }
-        if(ile==z.length())     {cout<<"Tak"<<endl;}
-        else                    {cout<<"Nie"<<endl;}
+vector<int> find_optimal_clock_setting(int k, vector<int>& clock) {
+    vector<int> correct_setting(k);
+    for (int i = 0; i < k; ++i) {
+        correct_setting[i] = i + 1;
     }
+
+    int start_index = 0;
+    for (int i = 0; i < k; ++i) {
+        if (clock[i] == correct_setting[0]) {
+            start_index = i;
+            break;
+        }
+    }
+
+    vector<int> adjusted_clock;
+    for (int i = start_index; i < k; ++i) {
+        adjusted_clock.push_back(clock[i]);
+    }
+    for (int i = 0; i < start_index; ++i) {
+        adjusted_clock.push_back(clock[i]);
+    }
+
+    return adjusted_clock;
+}
+
+int main() {
+    int d;
+    cin >> d;
+
+    for (int i = 0; i < d; ++i) {
+        int k;
+        cin >> k;
+        vector<int> clock(k);
+        for (int j = 0; j < k; ++j) {
+            cin >> clock[j];
+        }
+
+        vector<int> result = find_optimal_clock_setting(k, clock);
+
+        for (int j = 0; j < k; ++j) {
+            cout << result[j] << ' ';
+        }
+        cout << endl;
+    }
+
     return 0;
 }
