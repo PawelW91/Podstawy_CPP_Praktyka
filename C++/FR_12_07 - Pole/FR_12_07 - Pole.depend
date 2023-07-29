@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1690487719 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\c++\fr_12_07 - pole\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+
