@@ -17,11 +17,11 @@ int main()
             liczby.push_back(l);
         }
 
-        sort(liczby.begin(), liczby.end());     //usÛwa powtarzajace sie liczby
+        sort(liczby.begin(), liczby.end());     //us√≥wa powtarzajace sie liczby
         auto new_end = unique(liczby.begin(), liczby.end());
         liczby.erase(new_end, liczby.end());
 
-        if (liczby.size()>=x) {                 // Wypisanie x liczby od koÒca
+        if (liczby.size()>=x) {                 // Wypisanie x liczby od ko√±ca
             cout<<liczby[liczby.size()-x]<<endl;
         }else{
             cout<<"-"<<endl;
