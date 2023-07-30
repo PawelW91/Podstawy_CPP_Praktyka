@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1690728954 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\c++\kc022 - statystyka pozycyjna\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
