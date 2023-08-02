@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1690990057 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\polski_spoj\al_20_01 - alfabet morse'a\main.cpp
+	<iostream>
+	<string>
+	<algorithm>
+
