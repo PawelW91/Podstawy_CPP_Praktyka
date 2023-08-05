@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1691247286 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\polski_spoj\dczprost - wiele czerwonych kwadratów\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
