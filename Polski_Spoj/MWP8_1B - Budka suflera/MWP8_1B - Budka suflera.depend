@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1691435400 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\polski_spoj\mwp8_1b - budka suflera\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<sstream>
+	<string>
+
