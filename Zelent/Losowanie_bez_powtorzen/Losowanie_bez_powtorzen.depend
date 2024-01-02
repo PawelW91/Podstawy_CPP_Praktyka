@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1704218673 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\zelent\losowanie_bez_powtorzen\main.cpp
+	<iostream>
+	<time.h>
+	<cstdlib>
+	<windows.h>
+

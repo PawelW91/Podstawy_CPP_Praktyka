@@ -36,7 +36,7 @@ int main()
             if(anagram(x[i],x[j])==1)                                   //sprawdzam ktore slowo powtarza sie najwieksza liczbe razy
             {
                 pomoc+=1;
-                if(pomoc>odp)
+                if(pomoc>=odp)
                 {
                     odp=pomoc;
                     odp2=x[i];                                          //zaznaczam slowo(odp2) ktorego anagramy pojawily sie najwieksza ilosc razy
