@@ -59,6 +59,8 @@ void sortowanie_shella(int* tab, int n)
   }
 }
 
+void heapsort ()
+
 int main()
 {
     cout << "Porownanie czasow sortowania v1" << endl;
@@ -79,13 +81,11 @@ int main()
     srand(time(NULL));
 
     //wczytywanie losowych liczb do tablicy
-    for (int i=0; i<ile; i++) {tablica[i]=rand()%100000+1;}
-
-    //Przepisanie tablica=>tablica2 & tablica3, aby zachowaæ dane do porównania.
-    for (int i=0; i<ile; i++) {tablica2[i]=tablica[i];}
-    for (int i=0; i<ile; i++) {tablica3[i]=tablica[i];}
+    for (int i=0; i<ile; i++) {tablica[i]=rand()%100000+1;tablica2[i]=tablica[i];tablica3[i]=tablica[i]}
 
 //    cout<<"Przed posortowaniem: "<<endl;
+//    for (int i=0; i<ile; i++) cout<<tablica1[i]<<" "<<endl;
+//    for (int i=0; i<ile; i++) cout<<tablica2[i]<<" "<<endl;
 //    for (int i=0; i<ile; i++) cout<<tablica3[i]<<" "<<endl;
 
     cout<<"Sortuje teraz babelkowo. Prosze czekac!"<<endl;
