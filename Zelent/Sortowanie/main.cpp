@@ -240,7 +240,7 @@ clock_t start, stop;
 
 int main()
 {
-    cout<<"Porownanie czasow sortowania v1"<<endl;
+    cout<<"Porownanie czasow sortowania v2"<<endl;
     cout<<"Ile losowych liczb w tablicy: ";
     cin>>ile;
     cout<<endl;
