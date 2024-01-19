@@ -1,111 +1,198 @@
 #include <iostream>
-#include <iomanip>
-#include <ctime>
-#include <chrono>
-#include <sstream>
-//DO SKONCZENIA
+#include <string>
+#include <math.h>
+
 using namespace std;
 
-void pierwsza_funkcja(char x,int ile,string P[]);       //funkcja nadpisuje Pesel kobiet/mezczyzn na poczatek tablicy - dzieki temu dalej pracujemy na krotszej tabliy P[p];
-void druga_funkcja(string P[],int p);
+char plec(int pesel)
+{
+
+    if (pesel % 2 == 0)
+        return '2';
+    else
+        return '1';
+
+}
+
+char przestepny(int rok, int miesiac)
+{
+    int wiek=0;
+
+    if (miesiac > 0 && miesiac < 13)
+    {
+        wiek = 19;
+        rok+=(wiek*100);
+
+    }
+    else if (miesiac > 20 && miesiac < 33)
+    {
+        wiek = 20;
+        rok+=(wiek*100);
+
+    }
+    else if (miesiac > 40 && miesiac < 53)
+    {
+        wiek = 21;
+        rok+=(wiek*100);
+
+    }
+
+    else if (miesiac > 60 && miesiac < 73)
+    {
+        wiek = 22;
+        rok+=(wiek*100);
+
+    }
+
+    else if (miesiac > 80 && miesiac < 93)
+    {
+        wiek = 18;
+        rok+=(wiek*100);
+
+    }
+
+    if(rok % 4 == 0){
+        if(rok % 100 == 0){
+            if(rok % 400 == 0) return '1';
+            else return '2';
+
+        }
+        else return '1';
+    }
+    else return '2';
+
+}
+
+
+int dzien_tygodnia(int day,int month,int year)
+ {
+month -= 2;
+  if (month < 1) {
+    month += 12;
+    year -= 1;
+  }
+  if(year<12){year+=2000;}
+  else{year+=1900;}
+  int century = Math.floor(year / 100);
+  year %= 100;
+  int weekDay[(Math.floor((26 * month - 2) / 10) +day +year +Math.floor(year / 4) +Math.floor(century / 4) +5 * century) %7];
+
+}
 
 int main()
 {
-    int ile;
+
     string kod;
-    cin>>kod>>ile;
-    string P[ile];
-    for(int i=0;i<ile;i++)      {cin>>P[i];}
+    int testy;
 
-    pierwsza_funkcja(kod[0],ile,P);
+    cin >> kod >> testy;
 
+    int ile = 0;
+    int wynik = 0;
+
+    string test_pesel = {'1', '3', '7', '9', '1', '3', '7', '9', '1', '3', '1'};
+
+    for (int i = 0; i < 3; i++)
+    {
+        if (kod[i] != '0')
+            ile++;
+    }
+
+    for (int k = 0; k < testy; k++)
+    {
+
+        string pesel;
+        cin >> pesel;
+
+        int ilosc = 0;
+        bool szukaj=0;
+        int nr = 0;
+
+        for (int i = 0; i < 11; i++)
+        {
+
+            if (pesel[i] == '?')
+            {
+                szukaj = true;
+                nr = i;
+            }
+        }
+
+        int szukana = 1;
+        int suma = 0;
+
+        if (szukaj == true)
+        {
+            for (int i = 0; i < 11; i++)
+            {
+                if (i != nr)
+                {
+                    suma += ((pesel[i] - 48) * (test_pesel[i] - 48));
+                }
+
+            }
+
+            int suma_dwa = suma;
+
+            while (suma_dwa % 10 != 0)
+            {
+                suma_dwa = suma;
+                suma_dwa += (test_pesel[nr] - 48) * szukana;
+                szukana++;
+            }
+
+            szukana -= 1;
+            string zmiana=to_string(szukana);
+
+            pesel.replace(nr, 1, zmiana);
+
+        }
+
+        int suma_test=0;
+        for(int i=0; i<11; i++){
+            suma_test+=((pesel[i] - 48) * (test_pesel[i] - 48));
+        }
+
+        if(suma_test % 10 == 0){
+
+            if (kod[0] != '0')
+            {
+                char wartosc_1 = plec(pesel[9] - 48);
+                if (wartosc_1 == kod[0])
+                {
+                    ilosc++;
+                }
+
+            }
+
+            if (kod[2] != '0')
+            {
+                char wartosc_2 = przestepny(stoi(pesel.substr(0, 2)), stoi(pesel.substr(2, 2)));
+                if (wartosc_2 == kod[2])
+                {
+                    ilosc++;
+                }
+            }
+
+            if (kod[1] != '0')
+            {
+                char wartosc_3 = dzien_tygodnia(stoi(pesel.substr(0, 2)), stoi(pesel.substr(2, 2)), stoi(pesel.substr(4, 2)));
+                if (wartosc_3 == kod[1])
+                {
+                    ilosc++;
+                }
+            }
+
+            if (ilosc == ile)
+            {
+                wynik++;
+            }
+
+        }
+
+    }
+
+    cout << wynik;
 
     return 0;
-}
-void pierwsza_funkcja(char x,int ile,string P[])
-{
-    int p=0,p1;
-    if(x=='2')          //kobieta
-    {
-        for(int i=0;i<ile;i++)
-        {
-            char lastDigit = P[i].back();
-            p1 = stoi(string(1, lastDigit));
-            if(p1%2==0)
-            {
-                P[p]=P[i];
-                p++;
-            }
-        }
-    }
-    else if (x=='1')    //mezczyzna
-    {
-        for(int i=0;i<ile;i++)
-        {
-            char lastDigit = P[i].back();
-            p1 = stoi(string(1, lastDigit));
-            if(p1%2!=0)
-            {
-                P[p]=P[i];
-                p++;
-            }
-        }
-    }
-    else
-    {
-        p=ile;
-    }
-    druga_funkcja(P,p);
-}
-
-void druga_funkcja(string P[],int p)
-{
-            // Pobierz rok, miesi¹c i dzieñ z PESEL
-    for(int i=0;i<=p;i++)
-    {
-        int year = stoi(P[i].substr(0, 2));
-        int month = stoi(P[i].substr(2, 2));
-        int day = stoi(P[i].substr(4, 2));
-            // Dodaj odpowiedni¹ liczbê lat w zale¿noœci od wieku (czy PESEL nale¿y do osoby z XIX, XX czy XXI wieku)
-        if (month > 12 && month < 21)
-        {
-            year += 1800;
-            month -= 20;
-        }
-        else if (month > 20 && month < 33)
-        {
-            year += 2000;
-            month -= 20;
-        }
-        else if (month > 32 && month < 45)
-        {
-            year += 2100;
-            month -= 40;
-        }
-        else if (month > 44 && month < 57)
-        {
-            year += 2200;
-            month -= 40;
-        }
-        else if (month > 56 && month < 69)
-        {
-            year += 1800;
-            month -= 60;
-        }
-
-        tm timeinfo = {};
-        timeinfo.tm_year = year;
-        timeinfo.tm_mon = month - 1; // Months are in the range 0-11
-        timeinfo.tm_mday = day;
-
-        chrono::system_clock::time_point tp = chrono::system_clock::from_time_t(mktime(&timeinfo));
-        // Pobierz numer dnia tygodnia (1 dla poniedzia³ku, 2 dla wtorku, ..., 7 dla niedzieli)
-        time_t tt = chrono::system_clock::to_time_t(tp);
-        tm *now = localtime(&tt);
-        int dayOfWeek = now->tm_wday;
-        // Popraw numeracjê, aby zaczyna³a siê od 1 dla poniedzia³ku
-        dayOfWeek = (dayOfWeek == 0) ? 7 : dayOfWeek;
-
-        cout << to_string(dayOfWeek) << endl;
-    }
 }
