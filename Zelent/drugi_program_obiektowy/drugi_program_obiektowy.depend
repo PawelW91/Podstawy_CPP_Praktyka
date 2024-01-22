@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1705953247 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\zelent\drugi_program_obiektowy\main.cpp
+	<iostream>
+	"pytanie.h"
+
+1705952726 c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\zelent\drugi_program_obiektowy\pytanie.h
+	<iostream>
+
+1705953147 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\zelent\drugi_program_obiektowy\pytanie.cpp
+	<iostream>
+	"pytanie.h"
+	<fstream>
+	<cstdlib>
+	<cctype>
+

@@ -1,0 +1,36 @@
+Ile lyzeczek cukru do herbaty slodzi Pawel:
+1
+2
+3
+4
+b
+Ile razy w tygodniu Pawel chcialby chodzic na silownie:
+1
+2
+3
+4
+d
+Czy Pawel lubi jak mu sie robi zdjecia:
+Tak
+Nie
+---
+---
+b
+Jakiego koloru Pawel ma rekawiczki:
+Biale
+Zolte
+Czarne
+Rozowe
+c
+Jeden mecz w LOL trwa ~30min - ile gier zdazysz zagrac w 2h 5min:
+1
+2
+3
+4
+d
+Jak bardzo Pawel kocha Walercie:
+Nie kocha
+Troszke
+Bardzo
+Najbardziej w swiecie <3
+d
