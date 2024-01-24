@@ -49,4 +49,5 @@ Event::Event(string n,int d,int m,int y,int h,int mins)
 Event::~Event()
 {
     cout<<endl<<"To ja, destruktor!"<<endl<<"Sprzatam po obiekcie ;-)"<<endl;
+
 }

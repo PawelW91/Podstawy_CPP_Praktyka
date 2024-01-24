@@ -10,6 +10,7 @@ class Event
     string name;
 
     public:
+
     Event(string="BRAK",int=1,int=1,int=2015,int=12,int=0);
     ~Event();
     void load();
