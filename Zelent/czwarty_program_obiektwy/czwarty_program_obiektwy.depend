@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1706121723 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\zelent\czwarty_program_obiektwy\przyjaciele.cpp
+	<iostream>
+	"przyjaciele.h"
+
+1706121945 c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\zelent\czwarty_program_obiektwy\przyjaciele.h
+	<iostream>
+
+1706121416 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\zelent\czwarty_program_obiektwy\main.cpp
+	<iostream>
+	"przyjaciele.h"
+
