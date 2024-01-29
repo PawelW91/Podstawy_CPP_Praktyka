@@ -1,19 +1,31 @@
 #include <iostream>
-static int foo();
+#include <deque>
 
-/* Tu mo¿na dopisywaæ swój kod */
+using namespace std;
 
-/* Koniec miejsca na dopisywanie */
-static int foo()
-{
-    std::cout << "foo()" << std::endl;
+int main() {
+    int ile;
+    cin >> ile;
+
+    while (ile--) {
+        string x;
+        cin >> x;
+
+        deque<char> result;
+
+        for (char c : x) {
+            while (!result.empty() && c > result.back()) {
+                result.pop_back();
+            }
+            result.push_back(c);
+        }
+
+        for (char c : result) {
+            cout << c;
+        }
+
+        cout << endl;
+    }
+
     return 0;
-}
-
-int main()
-{
-   std::cout << "main()" << std::endl;
-   std::cout << "foo()" << std::endl;
-   foo();
-   return 0;
 }
