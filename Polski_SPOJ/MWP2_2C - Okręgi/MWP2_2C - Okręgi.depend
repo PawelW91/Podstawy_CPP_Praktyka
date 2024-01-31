@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1690398557 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\c++\mwp2_2c - okrêgi\main.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+

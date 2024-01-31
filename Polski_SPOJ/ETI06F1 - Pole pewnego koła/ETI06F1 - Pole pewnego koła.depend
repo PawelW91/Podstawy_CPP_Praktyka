@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1687975784 source:c:\users\48662\onedrive\dokumenty\github\podstawy_cpp_praktyka\c++\eti06f1 - pole pewnego ko³a\main.cpp
+	<iostream>
+	<math.h>
+	<sstream>
+
